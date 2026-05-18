@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: image
+    repo: https://github.com/FasilathulFazila/Portfolio-Backend
+    plan: free
+    buildCommand: chmod +x mvnw && ./mvnw clean install -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SPRING_MAIL_USERNAME
+        value: fazi82115@gmail.com
+      - key: SPRING_MAIL_PASSWORD
+        value: odkdiihjskfriwfw
+      - key: SPRING_MAIL_HOST
+        value: smtp.gmail.com
+      - key: SPRING_MAIL_PORT
+        value: "587"
+      - key: SERVER_PORT
+        value: "8080"
+      - key: SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH
+        value: "true"
+      - key: SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE
+        value: "true"
+      - key: LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB
+        value: DEBUG
