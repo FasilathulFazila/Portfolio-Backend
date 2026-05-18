@@ -2,6 +2,8 @@ services:
   - type: web
     name: portfolio-backend
     runtime: image
+    image: 
+      url: eclipse-temurin:17-jdk-alpine
     repo: https://github.com/FasilathulFazila/Portfolio-Backend
     plan: free
     buildCommand: chmod +x mvnw && ./mvnw clean install -DskipTests
@@ -10,7 +12,7 @@ services:
       - key: SPRING_MAIL_USERNAME
         value: fazi82115@gmail.com
       - key: SPRING_MAIL_PASSWORD
-        value: odkdiihjskfriwfw
+        value: your-new-app-password
       - key: SPRING_MAIL_HOST
         value: smtp.gmail.com
       - key: SPRING_MAIL_PORT
