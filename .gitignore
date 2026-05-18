@@ -32,5 +32,3 @@ build/
 ### VS Code ###
 .vscode/
 
-### SECURITY - Don't upload passwords! ###
-src/main/resources/application.properties
